@@ -17,6 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build && echo \"\n✅ Deployed! Visit: https://yaseenkhan940.github.io/fullstack-app\n\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

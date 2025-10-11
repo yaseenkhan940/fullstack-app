@@ -14,11 +14,11 @@ app.add_middleware(
 
 items = []
 
-@app.get("https://fullstack-app-0ebx.onrender.com/items")
+@app.get("/items")
 def get_items():
     return items
 
-@app.post("https://fullstack-app-0ebx.onrender.com/items")
+@app.post("/items")
 def add_item(item: dict):
     items.append(item)
     return item
@@ -27,6 +27,6 @@ def add_item(item: dict):
 def read_root():
     return {"message": "Hello from FastAPI! Backend is running.", "status": "success"}
 
-@app.get("https://fullstack-app-0ebx.onrender.com/items")
+@app.get("/items")
 def get_items():
     return [{"id": 1, "name": "Item One"}, {"id": 2, "name": "Item Two"}]

@@ -6,13 +6,13 @@ function App() {
   const [newItem, setNewItem] = useState("");
 
   useEffect(() => {
-    axios.get("https://fullstack-app-0ebx.onrender.com").then((res) => {
+    axios.get("https://fullstack-app-0ebx.onrender.com/api/items").then((res) => {
       setItems(res.data);
     });
   }, []);
 
   const addItem = () => {
-    axios.post("https://fullstack-app-0ebx.onrender.com", {
+    axios.post("https://fullstack-app-0ebx.onrender.com/api/items", {
       id: items.length + 1,
       name: newItem,
       description: "Sample description",
